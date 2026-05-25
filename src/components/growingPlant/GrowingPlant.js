@@ -1,20 +1,29 @@
 import React from 'react'
 
 function GrowingPlant(props) {
- 
-  const {plantData}=props
-  return (
-  
-        <div className='plant'>
-            <h1> I am a {plantData.name}</h1>
-            <div>I'm GrowingPlant
-              <span style={{fontSize:`${plantData.size}px`}}>{plantData.icon}</span>
-            </div>
 
-        </div>
-         
-      
-    
+  const { data } = props
+  const { news } = props
+  const { name, size, icon,aboutMe } = data
+  return (
+
+    <div className='plant'>
+      <h1> I am a {data.name}</h1>
+      {name === 'rose' ? <div>this is rose</div> : <div>this is not rose</div>}
+
+      <div>I'm GrowingPlant
+        <span style={{ fontSize: `${data.size}px` }}>{data.icon}</span>
+        {name === 'rose' ?<span>Yes</span>:''}
+      </div>
+      {/* {name === 'rose' ? <div>this is rose</div> : <div>this is not rose</div>} */}
+      {aboutMe.map((value ,index)=><div>{index+1}. {value}</div>
+      )}
+      <div>{news.sen}</div>
+
+    </div>
+
+
+
   )
 }
 
