@@ -1,15 +1,23 @@
-import React,{useState} from 'react'
+import React,{ useState,useEffect } from 'react'
 
 function GrowingPlant(props) {
 
   const { data } = props
   const { news } = props
-  const { name, size, icon,aboutMe } = data
+  let{ name, size, icon,aboutMe } = data
 
-  const[dynamicSize,setDynamicSize]=useState(size)
+  const[dynamicSize,setdynamicSize]=useState(size)
+
+  useEffect(()=>{
+    const interval=setInterval(()=>{
+      if(dynamicSize < 130)setdynamicSize(dynamicSize+20)
+    },1000)
+    return()=>clearInterval(interval)
+  },[dynamicSize,name])
 
   const handleClick =() =>{
-     setDynamicSize(dynamicSize + 20)
+     setdynamicSize(dynamicSize + 20)
+     console.log(dynamicSize)
   }
   return (
 
@@ -18,7 +26,7 @@ function GrowingPlant(props) {
       
 
       <div>
-        <span style={{ fontSize: `${data.dynamicSize}px` }}>{data.icon}</span>
+        <span style={{ fontSize: `${dynamicSize}px` }}>{data.icon}</span>
         {name === 'rose' ?<span>Yes</span>:''}
       </div>
       <button onClick={handleClick}>Give Water</button>
