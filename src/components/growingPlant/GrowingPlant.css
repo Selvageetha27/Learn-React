@@ -1,6 +1,56 @@
-.plant{
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}.form{
+    width: 250px;
+    height: 300px;
+    background-color:black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    border-radius: 20px;
+}
+.letter div {
+    color: white;
+}
+.pass{
     color: green;
 }
-.plant2{
-    color: red;
+.clk{
+    color: green;
 }
+.btn{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.btn button{
+    width: 100%;
+    padding: 5px;
+}
+.para{
+    color: white;
+}
+.form input{
+    width: 100%;
+    background-color: black;
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    color: white;
+}
+.acc{
+    display: flex;
+    padding-top: 5px;
+    text-align: center;
+}
+.form h3{
+    color: white;
+    padding-bottom: 8px;
+    text-align: center;
+}
+

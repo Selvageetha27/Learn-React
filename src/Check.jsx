@@ -1,10 +1,12 @@
 import React from 'react'
 import GrowingPlant from './components/growingPlant/GrowingPlant';
+import GrowingPlant2 from './components/growingPlant/GrowingPlant2';
 
 
 function Check() {
-  
- const plantData1={
+
+  const flower="Tulip"
+ const data={
     name:'rose',
     icon:'🌹',
     size:50,
@@ -23,11 +25,8 @@ function Check() {
     sen:'Hellooo'
   }
   return (
-    <div>
-      <h1>hai </h1>
-      <GrowingPlant data={plantData1} news={news1}/>
-      <GrowingPlant data={plantData2} news={news2}/>
-    </div>
+      <GrowingPlant2 con={flower} con2={plantData2}/>
+    
 
 
   )
