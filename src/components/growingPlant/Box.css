@@ -1,0 +1,43 @@
+.vendor{
+    display: flex;
+}
+.vendor h3{
+    padding-right: 10px;
+}
+.vendor button{
+    border: 1px solid rgb(237, 195, 237);
+    background-color:rgb(195, 163, 195);
+    color: rgb(149, 8, 149);
+    border-radius: 10px;
+}
+.box{
+    display: flex;
+}
+.next{
+    display: flex;
+    padding-left: 50px;
+    width: 100%;
+}
+.next button{
+    border: 1px solid gray;
+    
+    border-radius: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding: 3px;
+}
+.search{
+    flex: 1;
+}
+.filter{
+    border: 1px solid gray;
+   
+     padding: 2px;
+}
+.add{
+    border: 1px solid gray;
+   
+     padding: 3px;
+     background-color: black;
+     color: white;
+}

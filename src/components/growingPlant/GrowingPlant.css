@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }.form{
     width: 250px;
-    height: 300px;
+    
     background-color:black;
     position: absolute;
     top: 50%;

@@ -1,6 +1,7 @@
 import React from 'react'
 import GrowingPlant from './components/growingPlant/GrowingPlant';
 import GrowingPlant2 from './components/growingPlant/GrowingPlant2';
+import Box from './components/growingPlant/Box';
 
 
 function Check() {
@@ -25,9 +26,7 @@ function Check() {
     sen:'Hellooo'
   }
   return (
-      <GrowingPlant2 con={flower} con2={plantData2}/>
-    
-
+    <Box></Box>
 
   )
 }
