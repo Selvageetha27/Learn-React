@@ -2,7 +2,7 @@ import React from 'react'
 import './Box.css'
 function Box() {
     const arr = [{
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s",
         vendor: 'Blox',
         url: 'getblox.com',
         percent: '28%',
@@ -11,7 +11,7 @@ function Box() {
     },
 
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s",
         vendor: 'Brotha Platforms',
         url: 'brotha.gg',
         percent: '12%',
@@ -20,7 +20,7 @@ function Box() {
     },
 
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s",
         vendor: 'Layerz Softwares',
         url: 'layerz.io',
         percent: '71%',
@@ -29,7 +29,7 @@ function Box() {
     },
 
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s",
         vendor: 'Linez Technologies',
         url: 'linez.tech',
         percent: '20%',
@@ -38,7 +38,7 @@ function Box() {
     },
 
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s",
         vendor: 'PlanetX',
         url: 'planetx.gg',
         percent: '30%',
@@ -47,7 +47,7 @@ function Box() {
     },
 
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s",
         vendor: 'PowerUp Tech',
         url: 'pwrup.design',
         percent: '20%',
@@ -56,7 +56,7 @@ function Box() {
     },
 
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s",
         vendor: 'Ring Sciences',
         url: 'ringsciences.io',
         percent: '10%',
@@ -65,7 +65,7 @@ function Box() {
     },
 
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSHhmYXfPVpndbf0_8silZf6D_hAnEMrhgSw&s",
         vendor: 'Zeero Bros',
         url: 'zeerobros.com',
         percent: '50%',
@@ -92,12 +92,30 @@ function Box() {
                 </div>
                 <div className='table'>
                     <div className='name'>
-                        <div className='blox'><div><input type='checkbox' /></div>
-                            <div><img src='arr.img' /></div>
-                            <div>{arr[0].name}</div>
-                            <div>{arr[0].url}</div> </div>
+                        <div className='blox'>
+                            <div><input type='checkbox' /></div>
+                            <div><img src={arr[0].img} /></div>
+                            <div className='box1'>
+                                <div>{arr[0].vendor}</div>
+                                <div>{arr[0].url}</div>
+
+                            </div>
+                        </div>
 
                     </div>
+                    <div className='percentage'>
+                        <div className='per-con'>
+                            <div className='per-bar'></div>
+                            
+                        </div>
+                    </div>
+                    <div className='date'><p>{arr[0].date}</p></div>
+                    <div className='category'>{
+                        arr[0].categories.map((cat)=>{
+                           return <div className='cat-color'>{cat}</div>
+                        })
+                        
+                        }</div>
                 </div>
 
             </div>
