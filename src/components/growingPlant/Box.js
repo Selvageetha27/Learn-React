@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPen,faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 import './Box.css'
 function Box() {
     const arr = [{
@@ -97,7 +99,7 @@ function Box() {
                             <div><img src={arr[0].img} /></div>
                             <div className='box1'>
                                 <div>{arr[0].vendor}</div>
-                                <div>{arr[0].url}</div>
+                                <div className='url'>{arr[0].url}</div>
 
                             </div>
                         </div>
@@ -106,16 +108,20 @@ function Box() {
                     <div className='percentage'>
                         <div className='per-con'>
                             <div className='per-bar'></div>
-                            
                         </div>
+                        <div className='percent'>{arr[0].percent}</div>
                     </div>
                     <div className='date'><p>{arr[0].date}</p></div>
                     <div className='category'>{
-                        arr[0].categories.map((cat)=>{
-                           return <div className='cat-color'>{cat}</div>
+                        arr[0].categories.map((cat) => {
+                            return <div className='cat-color'>{cat}</div>
                         })
-                        
-                        }</div>
+
+                    }</div>
+                    <div className='icon'>
+                        <FontAwesomeIcon icon={faPen} />
+                        <FontAwesomeIcon icon={faEllipsisVertical} />
+                    </div>
                 </div>
 
             </div>
